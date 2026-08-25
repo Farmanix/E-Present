@@ -1,12 +1,12 @@
 # E-PRESENT
 
-Webapp link - https://script.google.com/macros/s/AKfycbz0DNLMsu8GRttRqgBqe3j9Z4QH8b5iGZX-8tueESzWbOc69bOmSGKjN6TSucQaAlNr/exec
+**Web App:** https://script.google.com/macros/s/AKfycbz0DNLMsu8GRttRqgBqe3j9Z4QH8b5iGZX-8tueESzWbOc69bOmSGKjN6TSucQaAlNr/exec
 
-E-PRESENT is a web-based smart attendance management system developed as a college project to simplify and digitize the traditional attendance process.
+E-PRESENT is a web-based smart attendance management system developed as a college project to digitize and simplify the traditional attendance process.
 
-The application allows students to register their profiles and mark attendance using their roll number and a lecture code. During attendance marking, the application requests the student's GPS location and sends the location data along with attendance information for verification.
+The system allows students to register using their roll number, name, and Gmail address, verify their identity through Gmail OTP, and mark attendance using a lecture code and browser-based GPS location.
 
-The system also provides dedicated panels for faculty and administrators to manage lectures, students, attendance records, and reports.
+The application also provides separate Faculty and Admin panels for managing lecture codes, student remarks, student status, attendance records, manual attendance, and attendance reports.
 
 ## Features
 
@@ -16,26 +16,29 @@ The system also provides dedicated panels for faculty and administrators to mana
   - Roll number
   - Full name
   - Gmail address
-- Gmail verification using OTP
-- Device identification for registered students
+- Gmail OTP verification
+- Device identification during registration
 - GPS-based attendance marking
 - Lecture-code based attendance
 - Attendance percentage checking
 - Student profile section
-- E-Card section planned for future development
+- E-Card option planned for future development
 
 ### 👨‍🏫 Faculty Panel
 
 - Faculty access authentication
 - Generate lecture codes
-- Select subject, lecture slot, and teacher
+- Select:
+  - Subject
+  - Lecture slot
+  - Teacher
 - Give remarks to students
 - Suspend students
 - Manage lecture-related attendance activities
 
 ### 🛡️ Admin Dashboard
 
-- Admin authentication
+- Admin access authentication
 - View registered students
 - Search students by roll number
 - Manual attendance entry
@@ -43,15 +46,42 @@ The system also provides dedicated panels for faculty and administrators to mana
 - Export attendance reports
 - Student management
 
+### 📍 Attendance System
+
+- Lecture-code based attendance
+- Browser GPS location collection
+- Location verification during attendance
+- Device-based student identification
+- Duplicate and validity checks handled by the backend
+- Attendance status handling
+- Digital attendance records
+- Suspicious-location flagging for review
+
+> GPS-based verification is intended as an additional attendance check. Location accuracy can vary depending on the device, browser, network conditions, and available location services.
+
 ### 📊 Attendance & Reports
 
-- Record attendance digitally
-- Store attendance information
-- GPS location verification
-- Attendance status handling
-- Subject/lecture-based attendance records
+- Digital attendance records
+- Subject/lecture-based attendance
 - Attendance percentage calculation
+- Lecture-wise attendance management
 - PDF attendance report export
+- Manual attendance entry for administrators
+
+## How It Works
+
+1. A student opens the E-PRESENT web application.
+2. The student registers using their roll number, name, and Gmail address.
+3. A verification code is sent to the provided Gmail address.
+4. After successful OTP verification, the student profile is registered along with device identification.
+5. Faculty generates a lecture code by selecting the subject, lecture slot, and teacher.
+6. The student enters their roll number and lecture code.
+7. The browser requests the student's current location.
+8. The location and attendance information are sent to the backend for verification.
+9. After verification, the attendance record is stored digitally.
+10. Students can check their attendance percentage through the Profile section.
+11. Faculty can generate lecture codes, give student remarks, and suspend students.
+12. Administrators can view/manage students, enter manual attendance, remove students, and export attendance reports.
 
 ## Technology Used
 
@@ -63,47 +93,22 @@ The system also provides dedicated panels for faculty and administrators to mana
 - Google Apps Script Services
 - Browser Geolocation API
 
-## How It Works
+The frontend is served as a Google Apps Script web app and communicates with server-side Apps Script functions for application operations. 1
 
-1. A student registers using their roll number, name, and Gmail.
-2. The system sends a verification code to the provided Gmail address.
-3. After successful verification, the student profile is created.
-4. Faculty generates a lecture code for a particular subject and lecture slot.
-5. The student enters their roll number and lecture code.
-6. The browser requests the student's current GPS location.
-7. Attendance information and location data are sent to the backend for verification.
-8. The attendance record is stored digitally.
-9. Students can later check their attendance percentage.
-10. Faculty and administrators can manage attendance and generate reports.
+## Project Architecture
 
-## Project Status
-
-The project is currently functional and was developed as a college project.
-
-Some features are still under development and may be improved in future versions, including more advanced location verification, stronger authentication, and additional student features.
-
-## Limitations
-
-GPS accuracy depends on the device, browser, network conditions, and available location services. Therefore, the system should not be considered a completely precise location-tracking solution.
-
-This project is intended for educational and demonstration purposes.
-
-## Future Improvements
-
-- Improved GPS/location validation
-- Stronger authentication and authorization
-- Better database architecture
-- Attendance analytics and graphical dashboards
-- Complete digital E-Card functionality
-- Improved security mechanisms
-- Cloud-based database integration
-- Responsive UI improvements
-- Automated attendance notifications
-
-## Project Purpose
-
-The main objective of E-PRESENT is to demonstrate how web technologies and location-based services can be combined to create a digital attendance management system that reduces manual work and makes attendance records easier to manage.
-
----
-
-**E-PRESENT — Smart, Digital & Location-Based Attendance Management System**
+```text
+Student / Faculty / Admin
+          │
+          ▼
+     E-PRESENT Web UI
+       HTML / CSS / JS
+          │
+          ▼
+   Google Apps Script
+       Backend
+          │
+     ┌────┴────┐
+     ▼         ▼
+Google Sheets  Gmail
+   Data       OTP
