@@ -1,116 +1,65 @@
-U# E-PRESENT 📍
+E-PRESENT 📍
 
-### Smart • Digital • GPS-Based Attendance Management System
+Smart • Digital • GPS-Based Attendance Management System
 
-E-PRESENT is a web-based smart attendance management system built to replace traditional manual attendance with a faster and more structured digital process.
+E-PRESENT is a web-based attendance management system that replaces manual attendance with GPS verification, device verification, lecture codes, Gmail OTP authentication, and digital attendance records.
 
-It combines **GPS verification, device ID generation , registered-device verification, lecture codes, Gmail OTP verification, digital attendance records, faculty controls, and admin management** in one system.
-
----
-
-## 🚀 Features
-
-### 👨‍🎓 Student
-
-- Student registration with Roll No, Name & Gmail
-- Gmail verification using OTP
-- Registered device identification
-- Device verification during attendance
-- GPS-based attendance verification
-- Lecture-code based attendance
-- Attendance percentage
-- Student profile
-- Digital E-Card
-- Automatic attendance-based tags
-
-### 👨‍🏫 Faculty
-
-- Faculty authentication
-- Generate unique lecture codes
-- Subject & lecture-slot management
-- Teacher information
-- Give remarks to students
-- Suspend students
-- Unsuspend students
-- Manage lecture attendance
-
-### 🛡️ Admin
-
-- Admin authentication
-- View registered students
-- Search students by roll number
-- View student status
-- Manual attendance entry
-- Remove students
-- View lecture attendance records
-- Attendance database
-
----
-
-## 📍 Smart Attendance System
-
-Attendance is verified using multiple checks:
-
-```text
-Roll Number + Lecture Code
-            ↓
-       GPS Location
-            ↓
-    Registered Device
-            ↓
-     Lecture Validation
-            ↓
-      Geofence Check
-            ↓
-    Attendance# E-PRESENT 📍
-
-### Smart • Digital • GPS-Based Attendance Management System
-
-🌐 **Live Web App:**  
+🌐 Live Demo:
 https://script.google.com/macros/s/AKfycbz0DNLMsu8GRttRqgBqe3j9Z4QH8b5iGZX-8tueESzWbOc69bOmSGKjN6TSucQaAlNr/exec
 
----
+✨ Key Features
 
-E-PRESENT is a web-based smart attendance management system built to replace traditional manual attendance with a faster and more structured digital process.
+- 📍 GPS-based attendance with polygon geofencing
+- 📱 Registered-device verification
+- 🔐 Gmail OTP authentication
+- 🔑 Unique lecture codes with time validation
+- 👨‍🎓 Student registration, profile & Digital E-Card
+- 👨‍🏫 Faculty lecture and attendance management
+- 🛡️ Admin controls and manual attendance
+- 🧠 Location anomaly detection
+- 📊 Attendance percentage & student ranking
+- 📝 Faculty remarks and automatic student tags
+- 📄 Attendance records & PDF reports
 
-It combines **GPS verification, device ID generation, registered-device verification, lecture codes, Gmail OTP verification, digital attendance records, faculty controls, and admin management** in one system.
+⚙️ How It Works
 
----
+Student
+   ↓
+Gmail OTP Verification
+   ↓
+Device Registration
+   ↓
+Enter Lecture Code
+   ↓
+GPS + Geofence Verification
+   ↓
+Device Verification
+   ↓
+Lecture Validation
+   ↓
+Attendance Recorded
 
-## 🚀 Features
+🛠️ Tech Stack
 
-### 👨‍🎓 Student
+Frontend: HTML5 • CSS3 • JavaScript
+Backend: Google Apps Script
+Database: Google Sheets
+Authentication: Gmail OTP / MailApp
+Location: Browser Geolocation API
 
-- Student registration with Roll No, Name & Gmail
-- Gmail verification using OTP
-- Device ID generation
-- Registered device identification
-- Device verification during attendance
-- GPS-based attendance verification
-- Lecture-code based attendance
-- Attendance percentage
-- Student profile
-- Digital E-Card
-- Automatic attendance-based tags
+📊 Attendance Status
 
-### 👨‍🏫 Faculty
+Status| Meaning
+"AUTO"| Normal verified attendance
+"MANUAL"| Added manually by admin/faculty
+"SUSPICIOUS"| Location anomaly detected
 
-- Faculty authentication
-- Generate unique lecture codes
-- Subject & lecture-slot management
-- Teacher information
-- Give remarks to students
-- Suspend students
-- Unsuspend students
-- Manage lecture attendance
+⚠️ Note
 
-### 🛡️ Admin
+GPS accuracy depends on the device, browser, network and available location services. E-PRESENT is currently developed as a college project and educational system.
 
-- Admin authentication
-- View registered students
-- Search students by roll number
-- View student status
-- Manual attendance entry
-- Remove students
-- View lecture attendance records
+🚀 Project Status
 
+Functional • College Project
+
+Built to make attendance digital, structured and smarter.
