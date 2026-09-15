@@ -1,4 +1,4 @@
-# E-PRESENT 📍
+U# E-PRESENT 📍
 
 ### Smart • Digital • GPS-Based Attendance Management System
 
@@ -114,21 +114,3 @@ It combines **GPS verification, device ID generation, registered-device verifica
 - Remove students
 - View lecture attendance records
 
----
-
-## 📍 Smart Attendance System
-
-Attendance is verified using multiple checks:
-
-```text
-Roll Number + Lecture Code
-            ↓
-       GPS Location
-            ↓
-    Registered Device
-            ↓
-     Lecture Validation
-            ↓
-      Geofence Check
-            ↓
-    Attendance Recorded Recorded
